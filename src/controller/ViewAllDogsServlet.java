@@ -18,7 +18,7 @@ public class ViewAllDogsServlet extends HttpServlet {
      * Default constructor. 
      */
     public ViewAllDogsServlet() {
-        // TODO Auto-generated constructor stub
+    	super();
     }
 
 	/**

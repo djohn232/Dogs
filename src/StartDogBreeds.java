@@ -90,7 +90,6 @@ public class StartDogBreeds {
 
 		public static void main(String[] args) {
 			runDogMenu();
-		}
 
 		public static void runDogMenu() {
 			boolean goAgain = true;
