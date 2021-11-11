@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<form action = "addDogServlet" method="post">
+<form action = "addDogServlet" method="post" onsubmit="return checkForm(this);">
 Breed: <input type ="text" name = "breed">
 Name: <input type = "text" name = "name">
 
@@ -17,5 +17,34 @@ Adopter Name: <input type = "text" name "adopterName">
 <a href = "viewAllDogsServlet">View Who is Up for Adoption</a>
 <a href="viewAllDogsServlet">View all adoption lists</a> <br />
 <a href="addAdoptersForListServlet">Create a new list</a>
+  
+  <script>
+
+function checkForm(form){
+	if (form.Breed.value == "" || form.Name.value == ""){
+		alert("Attention: Breed and/or Name field cannot be empty!");
+		form.Breed.focus();
+		return false;
+	}
+
+
+	var re = /^[\w ]+$/;
+
+	if (!re.test(form.Breed.value)) {
+		alert("Attention: Breed cannot contain invlaid characters.");
+		form.Breed.focus();
+		return false;
+	}
+  	if (!re.test(form.Name.value)) {
+		alert("Attention: Name cannot contain invlaid characters.");
+		form.Name.focus();
+		return false;
+	} 
+
+return true;
+
+}
+</script>
+  
 </body>
 </html>
