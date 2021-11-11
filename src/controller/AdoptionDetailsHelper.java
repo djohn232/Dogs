@@ -16,10 +16,12 @@ import model.AdoptionListDetails;
  * @author delan
  *
  */
+
+
 public class AdoptionDetailsHelper {
 	
 	public class ListDetailsHelper {
-		static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("ShoppingList");
+		static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("Dogs");
 		
 		public void insertNewListDetails(DogBreedHelp a) {
 			EntityManager em = emfactory.createEntityManager();
@@ -29,9 +31,9 @@ public class AdoptionDetailsHelper {
 			em.close();
 		}
 		
-		public List<DogBreeds> getLists() {
+		public List<StartDogBreeds> getLists() {
 			EntityManager em = emfactory.createEntityManager();
-			List<DogBreeds> allDetails = em.createQuery("SELECT d FROM ListDetails d").getResultList();
+			List<StartDogBreeds> allDetails = em.createQuery("SELECT d FROM ListDetails d").getResultList();
 			return allDetails;
 		}
 	}
