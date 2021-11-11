@@ -18,7 +18,7 @@ import model.DogBreeds;
  */
 public class DogBreedHelp {
 	
-	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("DogBreeds");
+	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("Dogs");
 
 	public void addADog(DogBreeds db) {
 		EntityManager em = emfactory.createEntityManager();
