@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<form action = "addDogServlet" method="post" onsubmit="return checkForm(this);">
+<form action = "addDogServlet" method="post" onsubmit="return formValidation(this);">
 Breed: <input type ="text" name = "breed">
 Name: <input type = "text" name = "name">
 
@@ -20,7 +20,7 @@ Adopter Name: <input type = "text" name "adopterName">
   
   <script>
 
-function checkForm(form){
+function formValidation(form){
 	if (form.Breed.value == "" || form.Name.value == ""){
 		alert("Attention: Breed and/or Name field cannot be empty!");
 		form.Breed.focus();
